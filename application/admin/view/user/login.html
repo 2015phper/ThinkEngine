@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Engine Login | 志远有18CM </title>
+	<!--STYLESHEET-->
+	<link href="__LAYUI__css/layui.css" rel="stylesheet" >
+	<link href='__ADMIN__css/font-face.css' rel='stylesheet' type='text/css'>
+	<link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/morris-js/morris.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+	<!--JAVASCRIPT-->
+	<script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+	<script src="__ADMIN__js/jquery.cookie.js"></script>
+	<script src="__ADMIN__js/bootstrap.min.js"></script>
+	<script src="__ADMIN__js/nifty.min.js"></script>
+	<script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+	<script src="__ADMIN__plugins/pace/pace.min.js"></script>
+	<script src="__LAYUI__layui.js"></script>
+	<script src="__ADMIN__js/myself.min.js"></script>
+	<!--Background Image [ DEMONSTRATION ]-->
+    <script src="__ADMIN__js/demo/bg-images.js"></script>
+</head>
+<body>
+	<div id="container" class="cls-container">
+		<!-- BACKGROUND IMAGE -->
+		<div id="bg-overlay" class="bg-img" style="background-image: url('/static/admin/img/bg-img/bg-img-{:rand(1, 7)}.jpg');"></div>
+		<!-- LOGIN FORM -->
+		<div class="cls-content">
+		    <div class="cls-content-sm panel">
+		        <div class="panel-body">
+		            <div class="mar-ver pad-btm">
+		                <h3 class="h4 mar-no">Think Engine Login</h3>
+		                <p class="text-muted"></p>
+		            </div>
+		            <form action="{:url('/admin/user/loginIn')}" method="post">
+		                <div class="form-group">
+		                    <input type="text" class="form-control" placeholder="用户名" autofocus name="username">
+		                </div>
+		                <div class="form-group">
+		                    <input type="password" class="form-control" placeholder="密码" name="password">
+		                </div>
+						<div class="input-group mar-btm ">
+							<input type="input" class="form-control" placeholder="验证码" name="captcha">
+							<span class="input-group-addon pad-no"><a href="javascript:void(0)" onclick="refreshCapt(this, false)">{:captcha_img()}</a></span>
+						</div>
+		                <div class="checkbox pad-btm text-left">
+		                    <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox" name="remember" value="1" checked>
+		                    <label for="demo-form-checkbox">记住密码</label>
+		                </div>
+		                <button class="btn btn-primary btn-lg btn-block" type="submit" id="code">登录</button>
+		            </form>
+		        </div>
+		
+		        <div class="pad-all">
+		            <a href="javascript:void(0)" class="btn-link mar-rgt add-tooltip" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="暂未开放密码找回功能">忘记密码 ?</a>
+		            <a href="{:url('user/register')}" class="btn-link mar-lft">向管理员申请账号</a>
+
+		            <div class="media pad-top bord-top">
+		                <div class="pull-right">
+		                    <a href="#" class="pad-rgt add-tooltip" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="暂未开放第三方登陆"><i class="demo-psi-facebook icon-lg text-primary"></i></a>
+		                    <a href="#" class="pad-rgt add-tooltip" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="暂未开放第三方登陆"><i class="demo-psi-twitter icon-lg text-info"></i></a>
+		                    <a href="#" class="pad-rgt add-tooltip" data-toggle="tooltip" data-container="body" data-placement="top" data-original-title="暂未开放第三方登陆"><i class="demo-psi-google-plus icon-lg text-danger"></i></a>
+		                </div>
+		                <div class="media-body text-left">
+		                    第三方登陆
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- DEMO PURPOSE ONLY -->
+		<div class="demo-bg hidden">
+		    <div id="demo-bg-list">
+		        <div class="demo-loading"><i class="psi-repeat-2"></i></div>
+		        <img class="demo-chg-bg bg-trans active" src="/static/admin/img/bg-img/thumbs/bg-trns.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-1.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-2.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-3.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-4.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-5.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-6.jpg" alt="Background Image">
+		        <img class="demo-chg-bg" src="/static/admin/img/bg-img/thumbs/bg-img-7.jpg" alt="Background Image">
+		    </div>
+		</div>
+	</div>
+	<!-- END OF CONTAINER -->
+		</body>
+</html>

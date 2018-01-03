@@ -1,0 +1,436 @@
+<!--JAVASCRIPT-->
+<script src="__ADMIN__plugins/bootbox/bootbox.min.js"></script>
+<!--NAVBAR-->
+<header id="navbar">
+    <div id="navbar-container" class="boxed">
+<!--Brand logo & name-->
+<div class="navbar-header">
+    <a href="{:url('/admin')}" class="navbar-brand">
+        <!--<img src="__ADMIN__img/logo.png" alt="Nifty Logo" class="brand-icon">-->
+        <div class="brand-title">
+            <span class="brand-text">Think Engine</span>
+        </div>
+    </a>
+</div>
+<!--================================-->
+<!--End brand logo & name-->
+
+<!--Navbar Dropdown-->
+<div class="navbar-content clearfix">
+    <ul class="nav navbar-top-links pull-left">
+
+        <!--Navigation toogle button-->
+        <li class="tgl-menu-btn">
+            <a class="mainnav-toggle" href="#">
+                <i class="demo-pli-view-list"></i>
+            </a>
+        </li>
+        <!--End Navigation toogle button-->
+
+
+
+        <!--Notification dropdown-->
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="demo-pli-bell"></i>
+                <span class="badge badge-header badge-danger"></span>
+            </a>
+
+            <!--Notification dropdown menu-->
+            <div class="dropdown-menu dropdown-menu-md">
+                <div class="pad-all bord-btm">
+                    <p class="text-semibold text-main mar-no">你有9条新的通知.</p>
+                </div>
+                <div class="nano scrollable">
+                    <div class="nano-content">
+                        <ul class="head-list">
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <p class="pull-left">数据库修复进度</p>
+                                        <p class="pull-right">70%</p>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div style="width: 70%;" class="progress-bar">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <p class="pull-left">升级进度</p>
+                                        <p class="pull-right">10%</p>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div style="width: 10%;" class="progress-bar progress-bar-warning">
+                                            <span class="sr-only">10% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="#">
+                                    <span class="badge badge-success pull-right">90%</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-data-settings icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">HDD 已满</div>
+                                        <small class="text-muted">50 分钟前</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="#">
+                                    <div class="media-left">
+                                        <i class="demo-pli-file-edit icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">写一篇属于你的文章</div>
+                                        <small class="text-muted">最后更新 8小时前</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="#">
+                                    <span class="label label-danger pull-right">New</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-speech-bubble-7 icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">评论消息</div>
+                                        <small class="text-muted">最后更新 8小时前</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="#">
+                                    <div class="media-left">
+                                        <i class="demo-pli-add-user-plus-star icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">新用户注册</div>
+                                        <small class="text-muted">4分钟前</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li class="bg-gray">
+                                <a class="media" href="#">
+                                    <div class="media-left">
+                                        <img class="img-circle img-sm" alt="Profile Picture" src="/static/admin/img/profile-photos/9.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">Lucy 给你发了一段消息</div>
+                                        <small class="text-muted">30 分钟前</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li class="bg-gray">
+                                <a class="media" href="#">
+                                    <div class="media-left">
+                                        <img class="img-circle img-sm" alt="Profile Picture" src="/static/admin/img/profile-photos/3.png">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">Jackson 给你发了一段消息</div>
+                                        <small class="text-muted">40 分钟前</small>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Dropdown footer-->
+                <div class="pad-all bord-top">
+                    <a href="#" class="btn-link text-dark box-block">
+                        <i class="fa fa-angle-right fa-lg pull-right"></i>显示所有通知
+                    </a>
+                </div>
+            </div>
+        </li>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--End notifications dropdown-->
+
+
+        <!--小工具合集-->
+        <li class="dropdown">
+            <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="fa fa-paw"></i>
+            </a>
+
+            <!--Notification dropdown menu-->
+            <div class="dropdown-menu dropdown-menu-md">
+                <div class="pad-all bord-btm">
+                    <p class="text-semibold text-main mar-no">网站小工具</p>
+                </div>
+                <div class="nano scrollable">
+                    <div class="nano-content">
+                        <ul class="head-list">
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="http://seo.chinaz.com/?q=www.52nd.xin" target="_blank">
+                                    <span class="badge badge-danger pull-right">1</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-data-settings icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">站长工具</div>
+                                        <small class="text-muted">SEO、网站的收录、权重</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="https://www.51.la/?19277864" target="_blank">
+                                    <span class="badge badge-danger pull-right">New</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-gear icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">访问量</div>
+                                        <small class="text-muted">50la数据访问量统计</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Dropdown footer-->
+                <div class="pad-all bord-top">
+                    <a href="javascript:layer.msg('暂无更多')" class="btn-link text-dark box-block"><i class="fa fa-angle-right fa-lg pull-right"></i>更多小工具</a>
+                </div>
+            </div>
+        </li>
+        <!--小工具合集结束-->
+
+        <!--常用功能-->
+        <li class="dropdown">
+            <a href="javascript:void(0)" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="fa fa-gear"></i>
+            </a>
+
+            <!--Notification dropdown menu-->
+            <div class="dropdown-menu dropdown-menu-md">
+                <div class="pad-all bord-btm">
+                    <p class="text-semibold text-main mar-no">功能模块</p>
+                </div>
+                <div class="nano scrollable">
+                    <div class="nano-content">
+                        <ul class="head-list">
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="{:url('/admin/model/index')}">
+                                    <span class="badge badge-danger pull-right">New</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-layout-grid icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">模块管理</div>
+                                        <small class="text-muted">自动化的模块快速建立</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Dropdown list-->
+                            <li>
+                                <a class="media" href="{:url('/admin/menu/index')}">
+                                    <span class="badge badge-success pull-right">New</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-internet icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="text-nowrap">菜单管理</div>
+                                        <small class="text-muted">一览大小 便知明暗</small>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--常用功能结束-->
+
+
+
+        <!--Mega dropdown-->
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <li class="mega-dropdown">
+            <a href="#" class="mega-dropdown-toggle">
+                <i class="demo-pli-layout-grid"></i>
+            </a>
+            <div class="dropdown-menu mega-dropdown-menu">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3">
+
+                        <!--Mega menu list-->
+                        <ul class="list-unstyled">
+                            <li class="dropdown-header"><i class="demo-pli-file icon-fw"></i> 静态页面</li>
+                            <li><a href="{:url('/admin/index/fontAwesome')}">font-awesome 图标</a></li>
+                            <li><a href="{:url('/admin/index/Ionic')}">Ionic 图标</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+
+                        <!--Mega menu list-->
+                        <ul class="list-unstyled">
+                            <li class="dropdown-header"><i class="demo-pli-mail icon-fw"></i> Mailbox</li>
+                            <li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
+                            <li><a href="#">Read Message</a></li>
+                            <li><a href="#">Compose</a></li>
+                        </ul>
+                        <p class="pad-top mar-top bord-top text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                    </div>
+                    <div class="col-sm-4 col-md-3">
+                        <!--Mega menu list-->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{:url('/index')}" target="_blank" class="media mar-btm">
+                                    <span class="badge badge-success pull-right">90%</span>
+                                    <div class="media-left">
+                                        <i class="demo-pli-data-settings icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-semibold text-dark mar-no">Index 模块</p>
+                                        <small class="text-muted">首页模块~</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:url('/home')}" target="_blank" class="media mar-btm">
+                                    <div class="media-left">
+                                        <i class="demo-pli-support icon-2x"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="text-semibold text-dark mar-no">DJ舞曲系统</p>
+                                        <small class="text-muted">优美的界面、丰富的资源，音乐系统</small>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <p class="dropdown-header"><i class="demo-pli-file-jpg icon-fw"></i> 图库</p>
+                        <ul class="list-unstyled list-inline text-justify">
+
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-2.jpg" alt="thumbs">
+                            </li>
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-3.jpg" alt="thumbs">
+                            </li>
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-1.jpg" alt="thumbs">
+                            </li>
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-4.jpg" alt="thumbs">
+                            </li>
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-5.jpg" alt="thumbs">
+                            </li>
+                            <li class="pad-btm">
+                                <img src="/static/admin/img//thumbs/mega-menu-6.jpg" alt="thumbs">
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-sm btn-block btn-default">浏览图库</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--End mega dropdown-->
+
+    </ul>
+    <ul class="nav navbar-top-links pull-right">
+
+        <li><a class="lang-selector" href="{:url('/index/index/index')}" target="_blank" title="首页"><i class="fa fa-home"></i></a></li>
+
+        <li><a class="lang-selector" href="{:url('/admin/Common/CacheClear')}" title="清除缓存"><i class="fa fa-trash"></i></a></li>
+
+        <!--User dropdown-->
+        <li id="dropdown-user" class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <!--<img class="img-circle img-user media-object" src="/static/admin/img/profile-photos/1.png" alt="Profile Picture">-->
+                                    <i class="demo-pli-male ic-user"></i>
+                                </span>
+                <div class="username hidden-xs">{$userObj->username}</div>
+            </a>
+
+
+            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+
+                <!-- User dropdown menu -->
+                <ul class="head-list">
+                    <li>
+                        <a href="{:url('user/detail')}">
+                            <i class="demo-pli-male icon-lg icon-fw"></i> 我的资料
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge badge-danger pull-right">9</span>
+                            <i class="demo-pli-mail icon-lg icon-fw"></i> 我的消息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!--<span class="label label-success pull-right">New</span>-->
+                            <i class="demo-pli-gear icon-lg icon-fw"></i> 设置
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{:url('admin/user/lockScreen')}">
+                            <i class="demo-pli-computer-secure icon-lg icon-fw"></i> 锁屏
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dropdown footer -->
+                <div class="pad-all text-right">
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="loginOut()">
+                        <i class="demo-pli-unlock"></i> 退出
+                    </a>
+                </div>
+            </div>
+        </li>
+        <!--End user dropdown-->
+
+        <li>
+            <a href="#" class="aside-toggle navbar-aside-icon">
+                <i class="pci-ver-dots"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--End Navbar Dropdown-->
+
+</div>
+</header>
+<!--END NAVBAR-->

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>友情链接{if input('id')}编辑{else}添加{/if} | TE.CMS - ThinkEngineCMS</title>
+
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/cropper.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/sitelogo.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__ADMIN__plugins/summernote/summernote.min.js"></script>
+    <script src="__ADMIN__plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/cropper.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/sitelogo.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/html2canvas.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">友情链接管理</h1>
+
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--End page title-->
+
+
+                <!--Breadcrumb-->
+                <ol class="breadcrumb">
+                    <li><a href="{:url('/admin')}">首页</a></li>
+                    <li><a href="{:url('link/index')}">列表</a></li>
+                    <li class="active">{lt name=":input('param.id')" value="0"}新增{else/}编辑{/lt}</li>
+                </ol>
+                <!--End breadcrumb-->
+
+                <!--Page content-->
+                <div id="page-content">
+
+					<div class="row">
+					    <div class="col-lg-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">友情链接管理</h3>
+					            </div>
+					
+					            <!-- BASIC FORM ELEMENTS -->
+					            <form method="post" action="{:url('link/save')}" class="Validform">
+                                    <div class="panel-body form-horizontal form-padding">
+                
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">链接类别</label>
+                                            <div class="col-md-5">
+                                                <select name="cid" class="selectpicker">
+                                                    {foreach $cate as $item}
+                                                    <option value="{$item.id}" {if $Obj->cid eq $item.id}selected{/if}>{$item.name}</option>
+                                                    {/foreach}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">链接名称</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" name="name" value="{$Obj->name}" placeholder="友情链接名称" datatype="*"  nullmsg="单页面的标题不能为空">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">介绍</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" name="desc" value="{$Obj->desc}" placeholder="友情链接介绍" datatype="*"  nullmsg="友情链接介绍">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">链接地址</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" name="url" value="{if input('id')}{$Obj->url}{else}http://{/if}" placeholder="请填写带http的友情链地址">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">网站LOGO</label>
+                                            <div class="col-md-5 input-group">
+                                                <input type="text" class="form-control data-cropper" placeholder="网站LOGO，建议使用65*65的PNG" name="logo" value="{$Obj->logo}"  onclick="viewPhoto(this, '.data-cropper')">
+                                                <span class="input-group-addon"><a href="JavaScript:void(0)" class="fa fa-upload" onclick="cropper(this)"></a></span>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">联系方式</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" name="mobile" value="{$Obj->mobile}" placeholder="友情链接的联系方式">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">前台显示</label>
+                                            <div class="col-md-5 radio">
+                                                <input id="radio-1" class="magic-radio" type="radio" name="display" value="1" {eq name="$Obj->display" value="1" }checked{/eq} checked><label for="radio-1">显示</label>
+                                                <input id="radio-2" class="magic-radio" type="radio" name="display" value="0" {eq name="$Obj->display" value="0" }checked{/eq}><label for="radio-2">隐藏</label>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">排序</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" name="rank" value="{$Obj->rank}" placeholder="将按从大到小排序，默认为0">
+                                            </div>
+                                        </div>
+
+                                    </div>
+					            <!-- END BASIC FORM ELEMENTS -->
+
+
+                                <div class="panel-footer text-right">
+                                    <input type="hidden" name="id" value="{$Obj->id}">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                                </form>
+					        </div>
+					    </div>
+					</div>
+
+                </div>
+                <!--End page content-->
+
+
+
+
+
+            </div>
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+    <script>
+        $(function () {
+            Myinit(); //全局实例化
+        })
+    </script>
+</body>
+</html>

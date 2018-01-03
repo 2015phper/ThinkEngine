@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片模块 | TE.CMS - ThinkEngineCMS</title>
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet">
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/dropzone/dropzone.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__ADMIN__plugins/noUiSlider/nouislider.min.js"></script>
+    <script src="__ADMIN__plugins/dropzone/dropzone.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+
+    <!--NAVBAR-->
+    {include file="static/admin/navbar.html"}
+    <!--END NAVBAR-->
+
+    <div class="boxed">
+
+        <!--CONTENT CONTAINER-->
+        <!--===================================================-->
+        <div id="content-container">
+
+            <!--Page Title-->
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div id="page-title">
+                <h1 class="page-header text-overflow">图片模块管理</h1>
+
+                <!--Searchbox-->
+                <div class="searchbox">
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search..">
+                        <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <!--End page title-->
+
+
+            <!--Breadcrumb-->
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <ol class="breadcrumb">
+                <li><a href="{:url('/admin')}">首页</a></li>
+                <li><a href="{:url('picture/index')}">列表</a></li>
+                <li><a href="{:url('picture/add')}">添加</a></li>
+                <li class="active">图片管理</li>
+            </ol>
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <!--End breadcrumb-->
+
+            <!--Page content-->
+            <!--===================================================-->
+            <div id="page-content">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">文章管理</h3>
+                            </div>
+
+                            <!-- BASIC FORM ELEMENTS -->
+                            <!--===================================================-->
+                            <form method="post" action="{:url('/admin/picture/save')}" class="Validform">
+                                <div class="panel-body form-horizontal form-padding">
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">名称</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="名称不能为空" name="name" value="{$Obj->name}"  nullmsg="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">类别</label>
+                                        <div class="col-md-7">
+                                            <select class="selectpicker col-xs-6 col-sm-4 col-md-6 col-lg-4" data-style="btn-primary" name="cid">
+                                                {volist name="cate" id="item"}
+                                                <option value="{$item.id}" {if $Obj->cid eq $item.id}selected{/if}>{$item.name}</option>
+                                                {/volist}
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">简介</label>
+                                        <div class="col-md-5">
+                                            <textarea name="desc" cols="30" rows="10" class="form-control" placeholder="" >{$Obj->desc}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Tags</label>
+                                        <div class="col-md-5 input-group">
+                                            <input type="text" class="form-control" placeholder="自动获取TAGS" name="tags" value="{$Obj->tags}">
+                                            <span class="input-group-addon"><a href="JavaScript:void(0)" onclick="getTags('name','tags')" class="fa fa-tags"></a></span>
+                                        </div>
+                                    </div>
+
+                                    <!--Radio-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">状态</label>
+                                        <div class="col-md-5">
+                                            <div class="radio">
+                                                <input id="radio-0" class="magic-radio" type="radio" name="status" value="0" {if $Obj->status eq 0}checked{/if}>
+                                                <label for="radio-0">未审核</label>
+                                                <input id="radio-1" class="magic-radio" type="radio" name="status" value="1" {if $Obj->status eq 1}checked{elseif $Obj->status eq ''}{/if}>
+                                                <label for="radio-1">正常</label>
+                                                <input id="radio-2" class="magic-radio" type="radio" name="status" value="2" {if $Obj->status eq 2}checked{/if}>
+                                                <label for="radio-2">锁定</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- END BASIC FORM ELEMENTS -->
+                                <div class="panel-footer text-right">
+                                    <input type="hidden" name="id" value="{$Obj->id}">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {if input('id')}
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">上传图片</h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="col-lg-12">
+                                    <div class="pad-ver">
+                                    <span class="btn btn-success fileinput-button dz-clickable">
+					                    <i class="fa fa-plus"></i>
+					                    <span>添加文件</span>
+					                </span>
+
+                                        <div class="btn-group pull-right hidden">
+                                            <button id="dz-upload-btn" class="btn btn-primary" type="button" disabled>
+                                                <i class="fa fa-upload-cloud"></i> 立刻上传
+                                            </button>
+                                            <button id="dz-remove-btn" class="btn btn-danger cancel" type="reset"
+                                                    disabled>
+                                                <i class="demo-pli-cross"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div id="dz-previews">
+                                        <div id="dz-template" class="pad-top bord-top">
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <!--This is used as the file preview template-->
+                                                    <div class="media-block">
+                                                        <div class="media-left">
+                                                            <img class="dz-img" data-dz-thumbnail>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text-main text-bold mar-no text-overflow" data-dz-name></p>
+                                                            <span class="dz-error text-danger text-sm" data-dz-errormessage></span>
+                                                            <p class="text-sm" data-dz-size></p>
+                                                            <div id="dz-total-progress" style="opacity:0">
+                                                                <div class="progress progress-xs active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                                    <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="media-right">
+                                                    <button data-dz-remove class="btn btn-xs btn-danger dz-cancel">
+                                                        <i class="demo-pli-cross"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {volist name="picture" id="item"}
+                                    <div class="pad-ver bord-top">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <!--This is used as the file preview template-->
+                                                <div class="media-block">
+                                                    <div class="media-left">
+                                                        <img class="" data-dz-thumbnail src="{$item.thumb}" width="80" height="80">
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text-main text-bold mar-no text-overflow">{$item.name}</p>
+                                                        <span class="text-danger text-sm"></span>
+                                                        <p class="text-sm"><strong>{$item.filesize}</strong> MB</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media-right">
+                                                <button class="btn btn-xs btn-primary" onclick="setCover('{$item.id}', '{$Obj->id}', this)">设置为封面图</button>
+                                            </div>
+                                            <div class="media-right">
+                                                <button data-dz-remove class="btn btn-xs btn-danger" onclick="removeThis('{$item.id}', this)"><i class="demo-pli-cross"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/volist}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/if}
+                </div>
+
+            </div>
+            <!--===================================================-->
+            <!--End page content-->
+
+        </div>
+        <!--===================================================-->
+        <!--END CONTENT CONTAINER-->
+
+        <!--ASIDE-->
+        {include file="static/admin/aside.html"}
+        <!--END ASIDE-->
+
+        <!--MAIN NAVIGATION-->
+        {include file="static/admin/menu.html"}
+        <!--END MAIN NAVIGATION-->
+
+    </div>
+
+    <!-- FOOTER -->
+    {include file="static/admin/footer.html"}
+    <!-- END FOOTER -->
+
+    <!-- SCROLL PAGE BUTTON -->
+    <!--===================================================-->
+    <button class="scroll-top btn">
+        <i class="pci-chevron chevron-up"></i>
+    </button>
+    <!--===================================================-->
+</div>
+<!--===================================================-->
+<!-- END OF CONTAINER -->
+<script>
+    $(function () {
+        // DROPZONE.JS WITH BOOTSTRAP'S THEME
+        // =================================================================
+        // Require Dropzone
+        // http://www.dropzonejs.com/
+        // =================================================================
+        // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+        var previewNode = document.querySelector("#dz-template");
+        previewNode.id = "";
+        var previewTemplate = previewNode.parentNode.innerHTML;
+        previewNode.parentNode.removeChild(previewNode);
+
+        var uploadBtn = $('#dz-upload-btn');
+        var removeBtn = $('#dz-remove-btn');
+        var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+            url: "/admin/picture/upload", // Set the url
+            thumbnailWidth: 80,
+            thumbnailHeight: 80,
+            parallelUploads: 20,
+            previewTemplate: previewTemplate,
+            autoQueue: true, // Make sure the files aren't queued until manually added
+            previewsContainer: "#dz-previews", // Define the container to display the previews
+            clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+        });
+
+        myDropzone.on("addedfile", function() {
+            // Hookup the button
+            uploadBtn.prop('disabled', false);
+            removeBtn.prop('disabled', false);
+        });
+
+        // Update the total progress bar
+        myDropzone.on("totaluploadprogress", function(progress) {
+            $("#dz-total-progress .progress-bar").css({'width' : progress + "%"});
+        });
+
+        myDropzone.on("sending", function(file) {
+            // Show the total progress bar when upload starts
+            document.querySelector("#dz-total-progress").style.opacity = "1";
+        });
+
+        // 上传完毕后获取base64的缩略图，并保存
+        myDropzone.on("thumbnail", function(file, dataUrl) {
+            //$.post("/admin/picture/thumb", {thumb:dataUrl});
+        });
+
+        //
+        myDropzone.on("success", function(file, dataUrl) {
+            var data = JSON.parse(file.xhr.responseText);
+            if(data.code == 1){
+                $.niftyNoty({message : data.msg, container : 'floating', timer : 3000});
+            }else{
+                $.niftyNoty({type: "danger", message : "服务器错误，请稍后再试！", container : 'floating', timer : 3000});
+            }
+        });
+
+        // Hide the total progress bar when nothing's uploading anymore
+        myDropzone.on("queuecomplete", function(progress) {
+            document.querySelector("#dz-total-progress").style.opacity = "0";
+            setTimeout(function () {
+                window.location.reload();
+            },3000)
+        });
+
+
+        // Setup the buttons for all transfers
+        uploadBtn.on('click', function() {
+            //Upload all files
+            myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+        });
+
+        removeBtn.on('click', function() {
+            myDropzone.removeAllFiles(true);
+            uploadBtn.prop('disabled', true);
+            removeBtn.prop('disabled', true);
+        });
+    })
+
+    /**
+     * 移除图片
+     * @param $id
+     * @param $this
+     */
+    function removeThis($id, $this) {
+        if(!$id){
+            $.niftyNoty({
+                type: "danger",
+                message : "请选择要移除的图片",
+                container : 'floating',
+                timer : 3000
+            });
+        }
+        $.post("/admin/picture/remove", {id: $id},function (data) {
+            if(data.code == 1){
+                $.niftyNoty({
+                    type: "success",
+                    message : data.msg,
+                    container : 'floating',
+                    timer : 3000
+                });
+                $($this).parent().parent().parent().remove();
+                return false;
+            }else{
+                $.niftyNoty({
+                    type: "danger",
+                    message : data.msg,
+                    timer : 3000
+                });
+                return false;
+            }
+        })
+    }
+
+    function setCover($id, $aid, $this) {
+        if(!$id && !$aid){
+            $.niftyNoty({
+                type: "danger",
+                message : "请选择要设置为封面图的图片",
+                container : 'floating',
+                timer : 3000
+            });
+        }
+        $.post("/admin/picture/setCover", {id: $id, aid: $aid},function (data) {
+            var $type = data.code == 1 ? "success" : "danger";
+            $.niftyNoty({type: $type, message : data.msg, timer : 3000});
+            return false;
+        })
+    }
+</script>
+</body>
+</html>

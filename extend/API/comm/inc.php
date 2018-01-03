@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101451656","appkey":"7bce42e8fdaddd8312992b901506cfdb","callback":"http://www.52nd.xin/index/user/QQCallback.html","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

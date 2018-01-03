@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章分类列表 | TE.CMS - ThinkEngineCMS</title>
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet' type='text/css'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/morris-js/morris.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+        <div class="boxed">
+            <!--CONTENT CONTAINER-->
+            <div id="content-container">
+                <!--Page Title-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">文章分类管理</h1>
+
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--End page title-->
+
+                <!--Breadcrumb-->
+                <ol class="breadcrumb">
+					<li><a href="{:url('/admin')}">首页</a></li>
+					<li><a href="{:url('news_cate/add')}">新增</a></li>
+					<li class="active">列表</li>
+                </ol>
+                <!--End breadcrumb-->
+
+                <!--Page content-->
+                <div id="page-content">
+					<div class="row">
+					<div class="panel">
+					    <div class="panel-heading">
+					        <h3 class="panel-title">文章分类列表</h3>
+					    </div>
+					
+					    <!--Data Table-->
+					    <div class="panel-body">
+					        <div class="pad-btm form-inline">
+                                <div class="row">
+                                    <div class="col-sm-6 table-toolbar-left">
+                                        <a class="btn btn-purple" href="{:url('/admin/news_cate/add')}"><i class="fa fa-plus-circle"></i> 新增</a>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-danger" onclick="delChecked('{:url('/admin/news_cate/delete')}',this,'form-horizontal')" title="批量删除"><i class="fa fa-trash-o"></i></button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a href="javascript:void(0)" class="btn btn-primary pull-left" onclick="checkThis(1)">全选</a>
+                                            <a href="javascript:void(0)" class="btn btn-info pull-left" onclick="checkThis(2)">全不选</a>
+                                            <a href="javascript:void(0)" class="btn btn-purple pull-left" onclick="checkThis(3)">反选</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 table-toolbar-right">
+                                        <form action="{:url('/admin/news_cate/index')}" method="get">
+                                            <div class="form-group">
+                                                <input id="demo-input-search2" type="text" placeholder="输入关键词搜索"
+                                                       class="form-control" autocomplete="off" name="keyword" value="{$Think.get.keyword}">
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                                                {if !empty($Think.get.keyword)}<a href="{:url('admin/news_cate/index')}" class="btn btn-default">清空搜索</a>{/if}
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+					        </div>
+					        <div class="table-responsive">
+                                <table id="demo-foo-addrow" class="table table-bordered table-hover toggle-circle form-horizontal">
+                                    <thead>
+                                    <tr>
+                                        <th width="20"></th>
+                                        <th>ID</th>
+                                        <th>层级</th>
+                                        <th>名称</th>
+                                        <th>排序</th>
+                                        <th>是否精选</th>
+                                        <th>添加时间</th>
+                                        <th>更新时间</th>
+
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {volist name='list' id='item' empty='暂无数据'}
+                                    <tr>
+                                        <td>
+                                            <input id="list-{$key}" class="magic-checkbox" type="checkbox" value="{$item.id}" >
+                                            <label for="list-{$key}"></label>
+                                        </td>
+                                        <td>{$item.id}</td>
+                                        <td>{$item._level}</td>
+                                        <td>{$item._name}</td>
+                                        <td>{$item.rank}</td>
+                                        <td>{:getFieldValue("refined",$item.refined,20)}</td>
+                                        <td>{$item.create_time|date='Y-m-d H:i:s',###}</td>
+                                        <td>{$item.update_time|date='Y-m-d H:i:s',###}</td>
+
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="{:url('news_cate/edit', ['id'=>$item.id])}" class="btn-xs btn btn-dark">编辑</a>
+                                                <a href="{:url('news_cate/delete', ['id'=>$item.id])}" onClick='return confirm("确定要删除吗？");' class="btn-xs btn btn-danger">删除</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {/volist}
+                                    </tbody>
+                                </table>
+                            </div>
+					        </div>
+					    </div>
+					    <!--End Data Table-->
+					</div>
+                </div>
+                <!--End page content-->
+            </div>
+            <!--END CONTENT CONTAINER-->
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+        </div>
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+    </div>
+    <!-- END OF CONTAINER -->
+</body>
+</html>
+

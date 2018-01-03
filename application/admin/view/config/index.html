@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站配置 | Nifty - Admin ThinkPHP</title>
+
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__ADMIN__plugins/summernote/summernote.min.js"></script>
+    <script src="__ADMIN__plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+    <!--NAVBAR-->
+    {include file="static/admin/navbar.html"}
+    <!--END NAVBAR-->
+    <div class="boxed">
+        <!--CONTENT CONTAINER-->
+        <!--===================================================-->
+        <div id="content-container">
+            <!--Page content-->
+            <div id="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--Default Tabs (Left Aligned)-->
+                        <!--===================================================-->
+                        <div class="tab-base">
+                            <!--Nav Tabs-->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1">基本设置 <span
+                                        class="badge badge-purple">27</span></a></li>
+                                <li><a data-toggle="tab" href="#tab-2">水印设置</a></li>
+                                <li><a data-toggle="tab" href="#tab-3">短信设置</a></li>
+                                <li><a data-toggle="tab" href="#tab-4">邮箱设置</a></li>
+                                <li><a data-toggle="tab" href="#tab-5">支付宝设置</a></li>
+                                <li><a data-toggle="tab" href="#tab-6">微信设置</a></li>
+                            </ul>
+                            <!--Tabs Content-->
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane fade active in">
+                                    <!-- BASIC FORM ELEMENTS -->
+                                    <form method="post" action="{:url('config/save')}" class="Validform">
+                                        <div class="panel-body form-horizontal form-padding">
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站备案号</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="record"
+                                                           value="{$Obj->record}" placeholder="网站备案号，将显示在前台底部欢迎信息等位置">
+                                                </div>
+                                                <small class="help-block"></small>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站名称</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="name"
+                                                           value="{$Obj->name}" placeholder="网站名称，将显示在前台顶部欢迎信息等位置"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站标题</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="title"
+                                                           value="{$Obj->title}" placeholder="网站标题，将显示在前台顶部欢迎信息等位置"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站描述</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="description"
+                                                           value="{$Obj->description}"
+                                                           placeholder="网站描述，将显示在前台顶部欢迎信息等位置"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站关键字</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="keywords"
+                                                           value="{$Obj->keywords}" placeholder="网站关键字，便于SEO"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">网站LOGO</label>
+                                                <div class="col-md-5 input-group">
+                                                    <input type="text" class="form-control data-cropper" name="logo" value="{$Obj->logo}" onclick="viewPhoto(this, '.data-cropper')">
+                                                    <span class="input-group-addon"><a href="JavaScript:void(0)" class="fa fa-upload" onclick="cropper(this)"></a></span>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Email</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="email"
+                                                           value="{$Obj->email}" placeholder="站长邮箱"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">联系方式</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="mobile"
+                                                           value="{$Obj->mobile}" placeholder="商家中心右下侧显示，方便商家遇到问题时咨询"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">具体地址</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="address"
+                                                           value="{$Obj->address}" placeholder="商家中心右下侧显示，方便商家遇到问题时咨询"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">QQ</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="qq" value="{$Obj->qq}"
+                                                           placeholder="商家中心右下侧显示，方便商家遇到问题时咨询"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- END BASIC FORM ELEMENTS -->
+
+                                        <div class="text-right">
+                                            <input type="hidden" name="id" value="{$Obj->id}">
+                                            <button class="btn btn-success" type="submit">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="tab-2" class="tab-pane fade">
+                                    <form method="post" action="{:url('config/save')}" class="demoform">
+                                        <div class="panel-body form-horizontal form-padding">
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">上传类型</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="postfix" class="form-control" placeholder="Add a tag" value="{$Obj->postfix}" data-role="tagsinput">
+                                                </div>
+                                                <small class="help-block"></small>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">文件大小限制</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="maxsize"
+                                                           value="{$Obj->maxsize}" placeholder="文件上传限制"/>
+                                                    <small class="help-block">文件最大限制，默认为10M，单位MB
+                                                    </small>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印开关</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+                                                        <!-- Inline radio buttons -->
+                                                        <input id="watermark" class="magic-radio" type="radio" name="watermark" value="1" {if $Obj->watermark eq 1}checked{/if}>
+                                                        <label for="watermark">启用</label>
+
+                                                        <input id="watermark_2" class="magic-radio" type="radio" name="watermark" value="0" {if $Obj->watermark eq 0}checked{/if}>
+                                                        <label for="watermark_2">禁用</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印类型</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+                                                        <!-- Inline radio buttons -->
+                                                        <input id="water_type" class="magic-radio" type="radio" name="water_type" value="1" {if $Obj->water_type eq 1}checked{/if}>
+                                                        <label for="water_type">图片</label>
+
+                                                        <input id="water_type_1" class="magic-radio" type="radio" name="water_type" value="0" {if $Obj->water_type eq 0}checked{/if}>
+                                                        <label for="water_type_1">文字</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印颜色</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_color" value="{$Obj->water_color}" placeholder="默认 #FFF"/>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印大小</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_size" value="{$Obj->water_size}" placeholder="默认14"/>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印图片</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_image" value="{$Obj->water_image}" placeholder="图片路径"/>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印字体</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_font" value="{$Obj->water_font}" placeholder="字体路径"/>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印文字</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_text" value="{$Obj->water_text}" placeholder="水印文字"/>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印位置</label>
+                                                <div class="col-md-5">
+                                                    <select class="selectpicker" name="water_position">
+                                                        <option value="1" {if $Obj->water_position eq 1}selected{/if}>左上角</option>
+                                                        <option value="2" {if $Obj->water_position eq 2}selected{/if}>上居中</option>
+                                                        <option value="3" {if $Obj->water_position eq 3}selected{/if}>右上角</option>
+                                                        <option value="4" {if $Obj->water_position eq 4}selected{/if}>左居中</option>
+                                                        <option value="5" {if $Obj->water_position eq 5}selected{/if}>中间居中</option>
+                                                        <option value="6" {if $Obj->water_position eq 6}selected{/if}>右居中</option>
+                                                        <option value="7" {if $Obj->water_position eq 7}selected{/if}>左下角</option>
+                                                        <option value="8" {if $Obj->water_position eq 8}selected{/if}>下居中</option>
+                                                        <option value="9" {if $Obj->water_position eq 9}selected{/if}>右下角</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">水印透明度</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="water_alpha" value="{$Obj->water_alpha}" placeholder="100不透明 越小越透明"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">缩略图开关</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+                                                        <!-- Inline radio buttons -->
+                                                        <input id="thumb" class="magic-radio" type="radio" name="thumb" value="1" {if $Obj->thumb eq 1}checked{/if}>
+                                                        <label for="thumb">启用</label>
+
+                                                        <input id="thumb_2" class="magic-radio" type="radio" name="thumb" value="0" {if $Obj->thumb eq 0}checked{/if}>
+                                                        <label for="thumb_2">禁用</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">缩略图宽度</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="thumb_width" value="{$Obj->thumb_width}" placeholder="默认 500px"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">缩略图高度</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="thumb_height" value="{$Obj->thumb_height}" placeholder="默认 500px"/>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">缩略图裁剪</label>
+                                                <div class="col-md-5">
+                                                    <select class="selectpicker" name="thumb_type">
+                                                        <option value="1" {if $Obj->thumb_type eq 1}selected{/if}>等比例缩放</option>
+                                                        <option value="2" {if $Obj->thumb_type eq 2}selected{/if}>缩放后填充</option>
+                                                        <option value="3" {if $Obj->thumb_type eq 3}selected{/if}>居中裁剪</option>
+                                                        <option value="4" {if $Obj->thumb_type eq 4}selected{/if}>左上角裁剪</option>
+                                                        <option value="5" {if $Obj->thumb_type eq 5}selected{/if}>右下角裁剪</option>
+                                                        <option value="6" {if $Obj->thumb_type eq 6}selected{/if}>固定尺寸缩放</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- END BASIC FORM ELEMENTS -->
+
+                                        <div class="text-right">
+                                            <input type="hidden" name="id" value="{$Obj->id}">
+                                            <button class="btn btn-success" type="submit">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="tab-3" class="tab-pane fade">
+                                    <p class="text-main text-semibold">Third Tab Content</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                </div>
+                                <div id="tab-4" class="tab-pane fade">
+                                    <form method="post" action="{:url('config/save')}" class="demoform">
+                                        <div class="panel-body form-horizontal form-padding">
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">邮件发送服务器(SMTP)</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="smtp_server"
+                                                           value="{$Obj->smtp_server}" placeholder="">
+                                                    <small class="help-block">发送邮箱的smtp地址。如:
+                                                        smtp.gmail.com或smtp.qq.com
+                                                    </small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">服务器(SMTP)端口</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="smtp_port"
+                                                           value="{$Obj->smtp_port}" placeholder="">
+                                                    <small class="help-block">smtp的端口。默认为25。具体请参看各STMP服务商的设置说明
+                                                        （如果使用Gmail，请将端口设为465）
+                                                    </small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">邮箱账号</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="smtp_user"
+                                                           value="{$Obj->smtp_user}" placeholder="">
+                                                    <small class="help-block">使用发送邮件的邮箱账号</small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">邮箱密码/授权码</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="smtp_pwd"
+                                                           value="{$Obj->smtp_pwd}" placeholder="">
+                                                    <small class="help-block">使用发送邮件的邮箱密码,或者授权码。具体请参看各STMP服务商的设置说明
+                                                    </small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">测试接收的邮件地址</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="test_email"
+                                                           value="{$Obj->test_email}" placeholder="">
+                                                    <small class="help-block">首次请先保存配置再测试</small>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- END BASIC FORM ELEMENTS -->
+
+                                        <div class="text-right">
+                                            <input type="hidden" name="id" value="{$Obj->id}">
+                                            <button class="btn btn-success" type="submit">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="tab-5" class="tab-pane fade">
+                                    <form method="post" action="{:url('config/save')}" class="demoform">
+                                        <div class="panel-body form-horizontal form-padding">
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">合作身份者</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="alipay_partner"
+                                                           value="{$Obj->alipay_partner}" placeholder="">
+                                                    <small class="help-block">合作身份者id，以2088开头的16位纯数字</small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">安全检验码</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="alipay_key"
+                                                           value="{$Obj->alipay_key}" placeholder="" datatype="*">
+                                                    <small class="help-block">安全检验码，以数字和字母组成的32位字符</small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">收款账号</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="alipay_account"
+                                                           value="{$Obj->alipay_account}" placeholder="">
+                                                    <small class="help-block">卖家支付宝账号</small>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- END BASIC FORM ELEMENTS -->
+
+                                        <div class="text-right">
+                                            <input type="hidden" name="id" value="{$Obj->id}">
+                                            <button class="btn btn-success" type="submit">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div id="tab-6" class="tab-pane fade">
+                                    <form method="post" action="{:url('config/save')}" class="demoform">
+                                        <div class="panel-body form-horizontal form-padding">
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">微信APPID</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="appid"
+                                                           value="{$Obj->appid}" placeholder="">
+                                                    <small class="help-block"></small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">微信应用密钥</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="appsecret"
+                                                           value="{$Obj->appsecret}" placeholder="" datatype="*">
+                                                    <small class="help-block"></small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">微信商户号</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="mchid"
+                                                           value="{$Obj->mchid}" placeholder="">
+                                                    <small class="help-block"></small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">微信商户密钥</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" class="form-control" name="key"
+                                                           value="{$Obj->key}" placeholder="">
+                                                    <small class="help-block"></small>
+                                                </div>
+                                            </div>
+
+                                            <!--text-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">微信公众号二维码</label>
+                                                <div class="col-md-5 input-group">
+                                                    <input type="text" class="form-control data-upload" name="QRCode" value="{$Obj->QRCode}">
+                                                    <span class="input-group-addon"><a href="JavaScript:void(0)" class="fa fa-upload" onclick="upload(this)"></a></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- END BASIC FORM ELEMENTS -->
+
+                                        <div class="text-right">
+                                            <input type="hidden" name="id" value="{$Obj->id}">
+                                            <button class="btn btn-success" type="submit">提交</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--===================================================-->
+                        <!--End Default Tabs (Left Aligned)-->
+                    </div>
+                </div>
+            </div>
+            <!--End page content-->
+        </div>
+        <!--END CONTENT CONTAINER-->
+        <!--ASIDE-->
+        {include file="static/admin/aside.html"}
+        <!--END ASIDE-->
+        <!--MAIN NAVIGATION-->
+        {include file="static/admin/menu.html"}
+        <!--END MAIN NAVIGATION-->
+    </div>
+    <!-- FOOTER -->
+    {include file="static/admin/footer.html"}
+    <!-- END FOOTER -->
+    <!-- SCROLL PAGE BUTTON -->
+    <button class="scroll-top btn">
+        <i class="pci-chevron chevron-up"></i>
+    </button>
+</div>
+<!-- END OF CONTAINER -->
+</body>
+</html>

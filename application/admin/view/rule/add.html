@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权限{if input('id')}编辑{else}添加{/if} | TE.CMS - ThinkEngineCMS</title>
+
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/cropper.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/sitelogo.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__ADMIN__plugins/summernote/summernote.min.js"></script>
+    <script src="__ADMIN__plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/cropper.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/sitelogo.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/html2canvas.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+        
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">权限管理</h1>
+
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--End page title-->
+                <!--Breadcrumb-->
+                <ol class="breadcrumb">
+                    <li><a href="{:url('/admin')}">首页</a></li>
+                    <li><a href="{:url('rule/index')}">列表</a></li>
+                    <li class="active">{if input('id')}编辑{else}添加{/if}</li>
+                </ol>
+                <!--End breadcrumb-->
+                <!--Page content-->
+                <div id="page-content">
+
+					<div class="row">
+					    <div class="col-lg-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">权限{if input('id')}编辑{else}添加{/if}</h3>
+					            </div>
+					            <!-- BASIC FORM ELEMENTS -->
+					            <form method="post" action="{:url('rule/saveOrUpdate')}" class="Validform">
+                                    <div class="panel-body form-horizontal form-padding">
+                
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">父类</label>
+                                            <div class="col-md-5">
+                                                <select name="pid" class="selectpicker">
+                                                    {$select}
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">权限名称</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写用户组名称" name="title" value="{$Obj->title}" datatype="*"  nullmsg="请填写用户组名称">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">权限标识</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="name" value="{$Obj->name}" datatype="*"  nullmsg="请填写权限标识">
+                                                <small class="help-block">模块-控制器-方法</small>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">模块名</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="type" value="{$Obj->type}" datatype="*"  nullmsg="请填写模块名">
+                                                <small class="help-block">admin or index</small>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">条件表达式</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="condition" value="{$Obj->condition}">
+                                                <small class="help-block">规则表达式，为空表示存在就验证，不为空表示按照条件验证</small>
+                                            </div>
+                                        </div>
+
+                                        <!--Radio-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">使用状态</label>
+                                            <div class="col-md-5">
+                                                <div class="radio">
+
+                                                    <input id="radio-1" class="magic-radio" type="radio" name="status" value="1" checked><label for="radio-1">启用</label>
+                                                    <input id="radio-0" class="magic-radio" type="radio" name="status" value="0" ><label for="radio-0">禁用</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                    </div>
+					            <!-- END BASIC FORM ELEMENTS -->
+
+
+                                <div class="panel-footer text-right">
+                                    <input type="hidden" name="id" value="{$Obj->id}">
+                                    <input type="hidden" name="pid" value="{$Obj->pid}">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                                </form>
+					        </div>
+					    </div>
+					</div>
+
+                </div>
+                <!--End page content-->
+
+
+
+
+
+            </div>
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+    </div>
+    <!-- END OF CONTAINER -->
+    <script>
+        $(function () {
+            Myinit();
+            var pid = $("input[name=pid]").val();
+        })
+    </script>
+</body>
+</html>

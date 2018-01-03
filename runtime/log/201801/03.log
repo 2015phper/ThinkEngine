@@ -1,0 +1,2239 @@
+---------------------------------------------------------------
+[ 2018-01-03T09:49:24+08:00 ] 127.0.0.1 127.0.0.1 GET /Common/CacheClear.html
+[ info ] www.thinkengine.cc/Common/CacheClear.html [运行时间：0.092006s][吞吐率：10.87req/s] [内存消耗：3,525.89kb] [文件加载：57]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Common',
+    2 => 'CacheClear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Common->CacheClear[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Common.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.494028s][吞吐率：2.02req/s] [内存消耗：4,562.09kb] [文件加载：61]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_config` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_config` ORDER BY id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_menu` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_menu` WHERE  (  status = 1 and position = 1 ) ORDER BY rank desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_area` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_area` WHERE  (  pid != 0 ) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.css [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,758.08kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,757.92kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.min.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.min.css [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,757.97kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.min.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,757.89kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：1,757.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,757.92kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,757.89kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:49:25+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,757.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=%7B%22code%22%3A1%2C%22msg%22%3A%22%5Cu7cfb%5Cu7edf%5Cu63d0%5Cu793a%5Cuff1a%5Cu7f13%5Cu5b58%5Cu5df2%5Cu6210%5Cu529f%5Cu66f4%5Cu65b0%5Cu3002%22%2C%22data%22%3A%22%22%2C%22url%22%3A%22http%3A%5C%2F%5C%2Fwww.thinkengine.cc%5C%2Fuser%5C%2Fedit%5C%2Fid%5C%2F1.html%22%2C%22wait%22%3A0%7D',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.438025s][吞吐率：2.28req/s] [内存消耗：3,985.60kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.min.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.min.css [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,756.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.min.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.css [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：1,756.88kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:11+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.439025s][吞吐率：2.28req/s] [内存消耗：3,747.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.css [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,756.88kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.min.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.min.css [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,756.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.min.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.435025s][吞吐率：2.30req/s] [内存消耗：3,747.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.min.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.min.css [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,756.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.min.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.css [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,756.88kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:12+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.428025s][吞吐率：2.34req/s] [内存消耗：3,747.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.min.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.min.css [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,756.98kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.min.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.css
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.css [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,756.91kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:13+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:18+08:00 ] 127.0.0.1 127.0.0.1 GET /index/fontAwesome.html
+[ info ] www.thinkengine.cc/index/fontAwesome.html [运行时间：0.119007s][吞吐率：8.40req/s] [内存消耗：4,385.59kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'fontAwesome',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Index->fontAwesome[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\index\icons-font-awesome.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:21+08:00 ] 127.0.0.1 127.0.0.1 GET /user/edit/id/1.html
+[ info ] www.thinkengine.cc/user/edit/id/1.html [运行时间：0.452026s][吞吐率：2.21req/s] [内存消耗：3,747.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\user->edit[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\User.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\user\edit.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'gradeList',
+  9 => 'group',
+  10 => 'Obj',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_group_access` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_group_access` WHERE  `uid` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:21+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/html2canvas.min.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/html2canvas.min.js [运行时间：0.036003s][吞吐率：27.78req/s] [内存消耗：1,756.80kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'html2canvas.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.040003s][吞吐率：25.00req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/cropper.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/cropper.js [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,756.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'cropper.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:22+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/plugins/cropper/head/sitelogo.js
+[ info ] www.thinkengine.cc/static/admin/plugins/cropper/head/sitelogo.js [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,756.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'static',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+  'plugins' => 'cropper',
+  'head' => 'sitelogo.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:23+08:00 ] 127.0.0.1 127.0.0.1 GET /index/Ionic.html
+[ info ] www.thinkengine.cc/index/Ionic.html [运行时间：0.123007s][吞吐率：8.13req/s] [内存消耗：4,351.70kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'Ionic',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/user/edit/id/1.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Index->Ionic[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\index\icons-ionicons.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:25+08:00 ] 127.0.0.1 127.0.0.1 GET /link_cate/index.html
+[ info ] www.thinkengine.cc/link_cate/index.html [运行时间：0.105006s][吞吐率：9.52req/s] [内存消耗：4,010.58kb] [文件加载：65]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'link_cate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/index/Ionic.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\LinkCate->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\LinkCate.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\link_cate\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_link_cate` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_link_cate` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_link_cate` WHERE  (  1=1 ) ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:27+08:00 ] 127.0.0.1 127.0.0.1 GET /link/index.html
+[ info ] www.thinkengine.cc/link/index.html [运行时间：0.112006s][吞吐率：8.93req/s] [内存消耗：4,074.38kb] [文件加载：66]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'link',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/link_cate/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Link->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Link.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\link\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'link',
+  9 => 'list',
+  10 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_link` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_link` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_link` WHERE  (  1=1 ) ORDER BY id asc LIMIT 0,10 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_link_cate` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_link_cate` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:28+08:00 ] 127.0.0.1 127.0.0.1 GET /flash/index.html
+[ info ] www.thinkengine.cc/flash/index.html [运行时间：0.094005s][吞吐率：10.64req/s] [内存消耗：4,032.07kb] [文件加载：65]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'flash',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/link/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Flash->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Flash.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\flash\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_flash` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_flash` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_flash` WHERE  (  1=1 ) ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:28+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20171130/2681ccd116a06270897e45e56f4b930f.jpg
+[ info ] www.thinkengine.cc/uploads/20171130/2681ccd116a06270897e45e56f4b930f.jpg [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,756.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'uploads',
+    2 => '20171130',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/flash/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:28+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20171129/f8e5a8f44e3205256897cfc567d3b45f.jpg
+[ info ] www.thinkengine.cc/uploads/20171129/f8e5a8f44e3205256897cfc567d3b45f.jpg [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,756.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'uploads',
+    2 => '20171129',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/flash/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:30+08:00 ] 127.0.0.1 127.0.0.1 GET /about/index.html
+[ info ] www.thinkengine.cc/about/index.html [运行时间：0.108006s][吞吐率：9.26req/s] [内存消耗：4,043.77kb] [文件加载：65]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'about',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/flash/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\About->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\About.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\about\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_about` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_about` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_about` WHERE  (  1=1 ) ORDER BY id asc LIMIT 0,20 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:31+08:00 ] 127.0.0.1 127.0.0.1 GET /flash/index.html
+[ info ] www.thinkengine.cc/flash/index.html [运行时间：0.108006s][吞吐率：9.26req/s] [内存消耗：3,805.88kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'flash',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Flash->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Flash.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\flash\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_flash` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_flash` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_flash` WHERE  (  1=1 ) ORDER BY id desc LIMIT 0,20 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-01-03T09:50:31+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20171130/2681ccd116a06270897e45e56f4b930f.jpg
+[ info ] www.thinkengine.cc/uploads/20171130/2681ccd116a06270897e45e56f4b930f.jpg [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,756.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'uploads',
+    2 => '20171130',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/flash/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:31+08:00 ] 127.0.0.1 127.0.0.1 GET /uploads/20171129/f8e5a8f44e3205256897cfc567d3b45f.jpg
+[ info ] www.thinkengine.cc/uploads/20171129/f8e5a8f44e3205256897cfc567d3b45f.jpg [运行时间：0.027001s][吞吐率：37.04req/s] [内存消耗：1,756.43kb] [文件加载：41]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'uploads',
+    2 => '20171129',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/flash/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-01-03T09:50:42+08:00 ] 127.0.0.1 127.0.0.1 GET /flash/index.html
+[ info ] www.thinkengine.cc/flash/index.html [运行时间：0.114007s][吞吐率：8.77req/s] [内存消耗：3,796.82kb] [文件加载：63]
+[ info ] [ LANG ] D:\wamp\www\120.79.12.123\ThinkEngine\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'flash',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkengine.cc',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.thinkengine.cc/about/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=01lsbhqfhgaalpelcq2pg8nd10; nifty=',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 86400,
+)
+[ info ] [ RUN ] app\admin\controller\Flash->index[ D:\wamp\www\120.79.12.123\ThinkEngine\application\admin\controller\Flash.php ]
+[ info ] [ VIEW ] D:\wamp\www\120.79.12.123\ThinkEngine\public/../application/admin\view\flash\list.html [ array (
+  0 => 'menuAry',
+  1 => 'urlRequest',
+  2 => 'request',
+  3 => 0,
+  4 => 1,
+  5 => 'aboutObj',
+  6 => 'userObj',
+  7 => 'user',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=localhost;dbname=think;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_user` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tc_flash` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tc_flash` WHERE  (  1=1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tc_flash` WHERE  (  1=1 ) ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]

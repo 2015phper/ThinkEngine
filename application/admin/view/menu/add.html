@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单添加 | TE.CMS - ThinkEngineCMS</title>
+
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/cropper.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/sitelogo.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__ADMIN__plugins/summernote/summernote.min.js"></script>
+    <script src="__ADMIN__plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/cropper.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/sitelogo.js"></script>
+    <script src="__ADMIN__plugins/cropper/head/html2canvas.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+        
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">菜单管理</h1>
+
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--End page title-->
+
+
+                <!--Breadcrumb-->
+                <ol class="breadcrumb">
+                    <li><a href="{:url('/admin')}">首页</a></li>
+                    <li><a href="{:url('menu/index')}">列表</a></li>
+                    <li class="active">新增</li>
+                </ol>
+                <!--End breadcrumb-->
+
+
+        
+
+                <!--Page content-->
+                <div id="page-content">
+
+					<div class="row">
+					    <div class="col-lg-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">菜单添加</h3>
+					            </div>
+					
+					
+					            <!-- BASIC FORM ELEMENTS -->
+					            <form method="post" action="{:url('menu/saveOrUpdate')}" class="demoform">
+                                    <div class="panel-body form-horizontal form-padding">
+                                        
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">菜单</label>
+                                            <div class="col-md-5">
+                                                <select class="selectpicker" name="data[pid]">
+                                                    {$select}
+                                                </select>
+                                            </div>
+                                        </div>
+                
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">名称</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写名称" name="data[name]" value=""  nullmsg="请填写名称">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">菜单路径</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写菜单路径" name="data[url]" value=""  nullmsg="请填写菜单路径">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">菜单图标</label>
+                                            <div class="col-md-5 input-group">
+                                                <input type="text" class="form-control" placeholder="请填写菜单图标" name="data[icon]" value=""  nullmsg="请填写菜单图标">
+                                                <span class="input-group-addon"><a href="JavaScript:void(0)" onclick="openPage('{:url(\'/admin/common/icon\')}','选择图标','80%','80%')" class="fa fa-file-picture-o"></a></span>
+                                            </div>
+                                        </div>
+
+                                            <!--Radio-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">菜单位置</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+
+                                                        <input id="radio-0" class="magic-radio" type="radio" name="data[position]" value="1" checked><label for="radio-0">左菜单</label>
+                                                        <input id="radio-1" class="magic-radio" type="radio" name="data[position]" value="2"><label for="radio-1">顶菜单</label>
+                                                        <input id="radio-2" class="magic-radio" type="radio" name="data[position]" value="3"><label for="radio-2">Index菜单</label>
+                                                        <input id="radio-3" class="magic-radio" type="radio" name="data[position]" value="4"><label for="radio-3">Home菜单</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--Radio-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">打开方式</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+                                                        <input id="target-0" class="magic-radio" type="radio" name="data[target]" value="_self" checked><label for="target-0">默认</label>
+                                                        <input id="target-1" class="magic-radio" type="radio" name="data[target]" value="_blank"><label for="target-1">新窗口</label>
+                                                        <input id="target-2" class="magic-radio" type="radio" name="data[target]" value="_parent"><label for="target-2">父窗口</label>
+                                                        <input id="target-3" class="magic-radio" type="radio" name="data[target]" value="_top"><label for="target-3">顶级窗口</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--Radio-->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">状态</label>
+                                                <div class="col-md-5">
+                                                    <div class="radio">
+                                                        <input id="status-0" class="magic-radio" type="radio" name="data[status]" value="0" checked><label for="status-0">禁用</label>
+                                                        <input id="status-1" class="magic-radio" type="radio" name="data[status]" value="1"><label for="status-1">正常</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">排序</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写排序" name="data[rank]" value=""  nullmsg="请填写排序">
+                                            </div>
+                                        </div>
+                
+                                    </div>
+					            <!-- END BASIC FORM ELEMENTS -->
+
+
+                                <div class="panel-footer text-right">
+                                    <input type="hidden" name="data[id]" value="">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                                </form>
+					        </div>
+					    </div>
+					</div>
+
+                </div>
+                <!--End page content-->
+
+
+            </div>
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+
+
+
+    </div>
+    <!-- END OF CONTAINER -->
+    <script>
+        $(".demoform").Validform({tiptype:3});
+    </script>
+</body>
+</html>

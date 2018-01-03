@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提示信息 - ThinkEngine CMS</title>
+	<!--STYLESHEET-->
+	<link href="__LAYUI__css/layui.css" rel="stylesheet" >
+	<link href='__ADMIN__css/font-face.css' rel='stylesheet' type='text/css'>
+	<link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="__ADMIN__plugins/morris-js/morris.min.css" rel="stylesheet">
+	<link href="__ADMIN__css/myself.min.css" rel="stylesheet">
+	<!--JAVASCRIPT-->
+	<script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+	<script src="__ADMIN__js/bootstrap.min.js"></script>
+	<script src="__ADMIN__js/nifty.min.js"></script>
+	<script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+	<script src="__LAYUI__layui.js"></script>
+	<script src="__ADMIN__js/myself.min.js"></script>
+</head>
+<body>
+	<div id="container" class="cls-container">
+		<!-- HEADER -->
+		<div class="cls-header">
+		    <div class="cls-brand">
+		        <a class="box-inline" href="index.html">
+		            <!-- <img alt="Nifty Admin" src="images/logo.png" class="brand-icon"> -->
+		            <span class="brand-title">ThinkEngine<span class="text-thin"> Admin</span></span>
+		        </a>
+		    </div>
+		</div>
+		<!-- CONTENT -->
+		<div class="cls-content">
+		    <h1 class="error-code text-danger">ERROR</h1>
+		    <p class="text-main text-semibold text-lg text-uppercase">
+				<?php echo(strip_tags($msg));?>
+			</p>
+		    <div class="pad-btm text-muted">
+				页面自动 <a id="href" href="<?php echo($url);?>">跳转</a> 等待时间： <b id="wait"><?php echo($wait);?></b>
+		    </div>
+		    <div class="row mar-ver">
+		        <form class="col-xs-12 col-sm-10 col-sm-offset-1" method="post" action="pages-search-results.html">
+		            <input type="text" placeholder="美好的事情从这里开始..." class="form-control input-lg error-search">
+		        </form>
+		    </div>
+		    <hr class="new-section-sm bord-no">
+		    <div class="pad-top"><a class="btn-link" href="{:url('/admin')}">主页</a></div>
+		</div>
+	</div>
+	<!-- END OF CONTAINER -->
+</body>
+	<script type="text/javascript">
+		(function(){
+			var wait = document.getElementById('wait'),
+				href = document.getElementById('href').href;
+			var interval = setInterval(function(){
+				var time = --wait.innerHTML;
+				if(time <= 0) {
+					location.href = href;
+					clearInterval(interval);
+				};
+			}, 1000);
+		})();
+	</script>
+</html>
+

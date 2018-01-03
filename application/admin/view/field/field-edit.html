@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义字段编辑 | TE.CMS - ThinkEngineCMS</title>
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet' type='text/css'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/morris-js/morris.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/select2/css/select2.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__plugins/select2/js/select2.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+
+    <!--NAVBAR-->
+    {include file="static/admin/navbar.html"}
+    <!--END NAVBAR-->
+
+    <div class="boxed">
+
+        <!--CONTENT CONTAINER-->
+        <!--===================================================-->
+        <div id="content-container">
+
+            <!--Page Title-->
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div id="page-title">
+                <h1 class="page-header text-overflow">字段管理</h1>
+
+                <!--Searchbox-->
+                <div class="searchbox">
+                    <div class="input-group custom-search-form">
+                        <input type="text" class="form-control" placeholder="Search..">
+                        <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <!--End page title-->
+
+
+            <!--Breadcrumb-->
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <ol class="breadcrumb">
+                <li><a href="{:url('/index')}">首页</a></li>
+                <li><a href="{:url('field/index', ['mid'=>input('mid')])}">列表</a></li>
+                <li class="active">新增</li>
+            </ol>
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <!--End breadcrumb-->
+
+
+
+
+            <!--Page content-->
+            <!--===================================================-->
+            <div id="page-content">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">添加字段</h3>
+                            </div>
+
+
+                            <!-- BASIC FORM ELEMENTS -->
+                            <!--===================================================-->
+                            <form method="post" action="{:url('field/update')}" class="demoform">
+                                <input type="hidden" name="mid" value="{$data.mid}">
+                                <input type="hidden" name="id" value="{$data.id}">
+                                <div class="panel-body form-horizontal form-padding">
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">中文名</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="请填写中文名" name="name" value="{$data.name}" datatype="*" nullmsg="请填写中文名">
+                                            <small class="help-block"></small>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">字段名</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="请填写字段名" name="fieldname" value="{$data.fieldname}" datatype="*" nullmsg="请填写字段名" disabled>
+                                            <!--<small class="help-block">请填写模块名称</small>-->
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">数据类型</label>
+                                        <div class="col-md-5">
+                                            <select class="selectpicker" onchange="setFormType(this.value)" data-style="btn-mint" onchange="" name="formtype">
+                                                <option value=""> -- </option>
+                                                <option value="input"    {eq name="$data.formtype" value="input"}selected{/eq}>单行文本</option>
+                                                <option value="textarea" {eq name="$data.formtype" value="textarea"}selected{/eq}>多行文本</option>
+                                                <option value="password" {eq name="$data.formtype" value="password"}selected{/eq}>密码文本</option>
+                                                <option value="editor"   {eq name="$data.formtype" value="editor"}selected{/eq}>编辑器</option>
+                                                <option value="xiala"    {eq name="$data.formtype" value="xiala"}selected{/eq}>下拉选择框</option>
+                                                <option value="radio"    {eq name="$data.formtype" value="radio"}selected{/eq}>单选按钮</option>
+                                                <option value="checkbox" {eq name="$data.formtype" value="checkbox"}selected{/eq}>复选框</option>
+                                                <option value="image"    {eq name="$data.formtype" value="image"}selected{/eq}>单图上传</option>
+                                                <option value="date"     {eq name="$data.formtype" value="date"}selected{/eq}>日期时间</option>
+                                                <!--<option value="linkage">地区菜单</option>-->
+                                                <option value="addtime"  {eq name="$data.formtype" value="addtime"}selected{/eq}>添加时间</option>
+                                                <option value="ip"       {eq name="$data.formtype" value="ip"}selected{/eq}>IP地址</option>
+                                                <option value="userid"   {eq name="$data.formtype" value="userid"}selected{/eq}>用户ID</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group" id="content" style="display: none;">
+                                        <label class="col-md-3 control-label">选项列表</label>
+                                        <div class="col-md-5">
+                                            <textarea name="setting[content]" id="" cols="20" rows="5" class="form-control" placeholder="格式：选项名称1|选项值1 (回车换行)">{$data.setting.content}</textarea>
+                                            <small class="help-block"></small>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">相关参数</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="默认值" name="setting[default]" value="{$data.setting.default}">
+                                            <small class="help-block"></small>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">字段类型</label>
+                                        <div class="col-md-5">
+                                            <select class="selectpicker" data-style="btn-primary" onchange="setLength()" name="type">
+                                                <option value="">-</option>
+                                                <option value="BIGINT" {eq name="$data.type" value="BIGINT"}selected{/eq}>十位整型(BIGINT)</option>
+                                                <option value="INT" {eq name="$data.type" value="INT"}selected{/eq}>十位整型(INT)</option>
+                                                <option value="TINYINT" {eq name="$data.type" value="TINYINT"}selected{/eq}>三位整型(TINYINT)</option>
+                                                <option value="SMALLINT" {eq name="$data.type" value="SMALLINT"}selected{/eq}>五位整型(SMALLINT)</option>
+                                                <option value="MEDIUMINT" {eq name="$data.type" value="MEDIUMINT"}selected{/eq}>八位整型(MEDIUMINT)</option>
+                                                <option value="DECIMAL" {eq name="$data.type" value="DECIMAL"}selected{/eq}>小数类型(DECIMAL)</option>
+                                                <option value="CHAR" {eq name="$data.type" value="CHAR"}selected{/eq}>字符类型(CHAR)</option>
+                                                <option value="VARCHAR" {eq name="$data.type" value="VARCHAR"}selected{/eq}>文字类型(VARCHAR)</option>
+                                                <option value="TEXT" {eq name="$data.type" value="TEXT"}selected{/eq}>文本类型(TEXT)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">长度值</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="" name="length" value="{$data.length}">
+                                            <!--<small class="help-block">请填写模块名称</small>-->
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">字段提示</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="" name="tips" value="{$data.tips}">
+                                            <!--<small class="help-block">请填写模块名称</small>-->
+                                        </div>
+                                    </div>
+
+                                    <!--radio-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">属性</label>
+                                        <div class="col-md-5">
+                                            <div class="radio">
+
+                                                <!-- Inline Checkboxes -->
+                                                <input id="demo-form-inline-checkbox" class="magic-checkbox" type="checkbox" name="listshow" value="1" {eq name="$data.listshow" value="1"}checked{/eq}>
+                                                <label for="demo-form-inline-checkbox">列表显示</label>
+
+                                                <input id="demo-form-inline-checkbox-2" class="magic-checkbox" type="checkbox" name="isshow" value="1" {eq name="$data.isshow" value="1"}checked{/eq}>
+                                                <label for="demo-form-inline-checkbox-2">编辑显示</label>
+
+                                                <input id="demo-form-inline-checkbox-3" class="magic-checkbox" type="checkbox" name="cansearch" value="1" {eq name="$data.cansearch" value="1"}checked{/eq}>
+                                                <label for="demo-form-inline-checkbox-3">搜索字段</label>
+
+                                                <input id="demo-form-inline-checkbox-4" class="magic-checkbox" type="checkbox" name="not_null" value="1" {eq name="$data.not_null" value="1"}checked{/eq}>
+                                                <label for="demo-form-inline-checkbox-4">必填字段</label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group pad-ver">
+                                        <label class="col-md-3 control-label">字段索引</label>
+                                        <div class="col-md-9">
+                                            <div class="radio">
+
+                                                <!-- Inline radio buttons -->
+                                                <input id="demo-inline-form-radio" class="magic-radio" type="radio" name="indexkey" value="" {eq name="$data.indexkey" value=""}checked{/eq}>
+                                                <label for="demo-inline-form-radio">无</label>
+
+                                                <input id="demo-inline-form-radio-2" class="magic-radio" type="radio" name="indexkey" value="UNIQUE" {eq name="$data.indexkey" value="UNIQUE"}checked{/eq}>
+                                                <label for="demo-inline-form-radio-2">唯一索引</label>
+
+                                                <input id="demo-inline-form-radio-3" class="magic-radio" type="radio" name="indexkey" value="INDEX" {eq name="$data.indexkey" value="INDEX"}checked{/eq}>
+                                                <label for="demo-inline-form-radio-3">普通索引</label>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--text-->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">排序</label>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" placeholder="" name="listorder" value="{$data.listorder}">
+                                            <!--<small class="help-block">请填写模块名称</small>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--===================================================-->
+                                <!-- END BASIC FORM ELEMENTS -->
+
+
+                                <div class="panel-footer text-right">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--===================================================-->
+            <!--End page content-->
+
+
+        </div>
+        <!--===================================================-->
+        <!--END CONTENT CONTAINER-->
+
+
+
+        <!--ASIDE-->
+        {include file="static/admin/aside.html"}
+        <!--END ASIDE-->
+
+
+        <!--MAIN NAVIGATION-->
+        {include file="static/admin/menu.html"}
+        <!--END MAIN NAVIGATION-->
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+    {include file="static/admin/footer.html"}
+    <!-- END FOOTER -->
+
+
+    <!-- SCROLL PAGE BUTTON -->
+    <!--===================================================-->
+    <button class="scroll-top btn">
+        <i class="pci-chevron chevron-up"></i>
+    </button>
+    <!--===================================================-->
+
+
+
+</div>
+<!--===================================================-->
+<!-- END OF CONTAINER -->
+
+<script>
+    $(function () {
+        MyInit();
+    })
+    function setLength() {
+        var type = new Array();
+        type['BIGINT']='11';
+        type['INT']='11';
+        type['TINYINT']='3';
+        type['SMALLINT']='5';
+        type['MEDIUMINT']='8';
+        type['DECIMAL']='18,2';
+        type['CHAR']='50';
+        type['VARCHAR']='255';
+        type['TEXT']='';
+        type['DATA']='';
+        var name = $("select[name='type']").selectpicker('val');
+        if (name) {
+            var v = type[name];
+            $("input[name='length']").val(v);
+        }
+    }
+    function setFormType(value) {
+        var type = $("select[name='type']"),
+            lth = $("input[name='length']"),
+            fieldname = $("input[name='fieldname']"),
+            setting = $("#setting"),
+            settingType = $("#type");
+        if(value == "input" || value == "password"){
+            fieldname.attr('datatype','*').parent().parent().show();
+            type.find("option[value='VARCHAR']").prop("selected", true);
+            lth.val("255");
+            setting.hide(),settingType.hide();
+        }
+        else if(value == "textarea" || value == "editor"){
+            fieldname.attr('datatype','*').parent().parent().show();
+            type.find("option[value='TEXT']").prop("selected", true);
+            lth.val("");
+            setting.hide(),settingType.hide();
+        }
+        else if(value == "xiala" || value == "radio" || value == "checkbox"){
+            fieldname.attr('datatype','*').parent().parent().show();
+            type.find("option[value='TEXT']").prop("selected", true);
+            lth.val("");
+            setting.show(),settingType.hide();
+        }
+        else if(value == "image"){
+            type.find("option[value='VARCHAR']").prop("selected", true);
+            type.val("VARCHAR");
+            lth.val("255");
+            fieldname.removeAttr('datatype').parent().parent().hide();
+            setting.hide(),settingType.hide();
+        }
+        else if(value == "area"){
+            type.find("option[value='INT']").prop("selected", true);
+            fieldname.removeAttr('datatype').parent().parent().hide();
+            lth.val("11");
+            setting.hide(),settingType.hide();
+        }
+        else if(value == "datetime"){
+            settingType.show();
+            fieldname.attr('datatype','*').parent().parent().show();
+        }
+        type.selectpicker('refresh');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户组权限分配 | TE.CMS - ThinkEngineCMS</title>
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet' type='text/css'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/morris-js/morris.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+<div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+        
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+					<div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">{$group_data['name']} 权限管理</h3>
+                                </div>
+
+
+                                <!-- BASIC FORM ELEMENTS -->
+                                <form method="post" action="{:url('rule/ruleSave')}" class="form-horizontal">
+                                    <div class="panel-body form-horizontal form-padding">
+                                        {volist name="$rule_data" id="item"}
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label text-left">{$item.title}</label>
+                                            <div class="col-md-10">
+                                                <div class="radio">
+                                                    {volist name="$item._data" id="value" key="key"}
+                                                    <input id="checkbox-{$key}" class="magic-checkbox" type="checkbox" name="rule[]" value="{$value.id}" {in name="$value.id" value="$group_data.rules"}checked{/in} >
+                                                    <label for="checkbox-{$key}">{$value.title}</label>
+                                                    {/volist}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/volist}
+
+                                    </div>
+                                    <!-- END BASIC FORM ELEMENTS -->
+                                    <div class="panel-footer text-right">
+                                        <input type="hidden" name="id" value="{$group_data.id}">
+                                        <button class="btn btn-success" type="submit">提交</button>
+                                        <a href="javascript:void(0)" class="btn btn-primary pull-left" onclick="checkThis(this, 1)">全选</a>
+                                        <a href="javascript:void(0)" class="btn btn-info pull-left" onclick="checkThis(this, 2)">取消全选</a>
+                                        <a href="javascript:void(0)" class="btn btn-dark pull-left" onclick="checkThis(this, 3)">全选</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+
+            
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+
+        </div>
+
+        
+
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+    <script>
+        $(function () {
+        })
+    </script>
+</body>
+</html>
+

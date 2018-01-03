@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ThinkEngine - 年轻、活力的后台引擎</title>
+<meta name="keywords" content="后台模板,后台管理模版,layuiAdmin,admin">
+<meta name="description" content="layuiAdmin 是一款 layui 官方出品的后台管理模板开发框架，不仅限于模板。它采用了 layui 自建的一套架构， 全面接管视图和路由，并自主完成数据渲染，服务端通常只负责数据接口，因此这赋予了 layuiAdmin 单页面应用开发的能力。">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<link rel="stylesheet" href="__LAYUI__css/layui.css" media="all">
+<link rel="stylesheet" href="/static/download/css/global.css" media="all">
+<link rel="stylesheet" href="/static/download/css/style.css" media="all">
+
+</head>
+<body>
+
+<div class="header">
+  <div class="layui-main">
+    <a class="logo" href="http://www.52nd.xin">
+      <img src="/static/download/images/logo.png" alt="layui">
+    </a>
+    <ul class="layui-nav">
+      <li class="layui-nav-item">
+        <a href="http://www.52nd.xin" target="_blank">    
+          <span class="layui-hide-xs">前台首页</span>
+          <span class="layui-show-xs layui-hide-sm">前台</span>
+        </a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;" target="_blank" onclick="layer.tips('账号：test 密码：123456', this,{tips:[3,'#01AAED']});">    
+          <span class="layui-hide-xs">获取账号</span>
+          <span class="layui-show-xs layui-hide-sm">账号</span>
+        </a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="http://www.52nd.xin/admin" target="_blank">
+          <span class="layui-hide-xs">在线演示</span>
+          <span class="layui-show-xs layui-hide-sm">演示</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="alone-banner">
+  <div class="layui-main">
+    <h1>ThinkEngine 年轻、活力的后台引擎</h1>
+    <p class="layui-hide-xs">前台完全基于 layui 开发，后台则由NiftyAdmin + ThinkPHP结合的后台管理系统</p>
+    <!--<p><span id="adminCountdown" style="display: inline-block; padding: 0 10px; line-height: 30px; border-radius: 2px; background-color: #c00;"></span></p>-->
+  </div>
+</div>
+
+<div class="alone-preview">
+  
+  <p class="alone-download-btn">
+    <a href="" target="_blank" class="layui-btn layui-btn-normal">
+      立即下载
+    </a>
+    <a href="#get" class="layui-btn layui-btn-primary alone-download-right">
+      GITHUB
+    </a>
+  </p>
+
+
+  <div class="layui-carousel" id="LAY_preview">
+    <div carousel-item>
+      <div>
+        <a href="pro/" target="_blank">
+          <img src="/static/download/images/168_1514138194454_6670.png" alt="默认主题">
+        </a>
+      </div>
+      <div>
+        <a href="pro/" target="_blank">
+          <img src="/static/download/images/168_1514138271892_33629.png" alt="墨绿主题">
+        </a>
+      </div>
+      <div>
+        <a href="pro/" target="_blank">
+          <img src="/static/download/images/168_1514138278111_82872.png" alt="亮蓝主题">
+        </a>
+      </div>
+  </div>
+
+</div>
+
+<a name="get"> </a>
+
+<div class="layui-main alone-items">
+  <fieldset class="layui-elem-field layui-field-title">
+    <legend>获取授权</legend>
+  </fieldset>
+  <div class="layui-row layui-col-space20">
+  
+    <div class="layui-col-sm6">
+      <div class="alone-version-desc layui-text">
+        <h2>开源版</h2>
+        <p>
+          <span class="alone-badge">
+            ThinkEngine V1.0
+            <i class="layui-icon alone-tips" lay-tips="目前版本可在GITHUB下载，此版本为1.0开源版，不接受维护，不收取任何费用。">&#xe702;</i>
+          </span>
+        </p>
+        <i class="layui-badge" style="position: absolute; right: 30px; top: 30px;">new</i>
+        <ul>
+          <li>始终基于全新的 layui 版本</li>
+          <li>单页面应用，所有操作无需跳转</li>
+          <li>支持前后端分离开发模式</li>
+          <li>同时也内置对 iframe 方式的支持</li>
+          <li>面向全屏幕尺寸的响应式适配能力</li>
+          <li>灵活的主题色配置</li>
+          <li>专属的开发者文档，助你快速掌握</li>
+          <li>专属的会员群，与同道中人隔空交流</li>
+          <li>layui 社区 VIP 标识</li>
+          <li>不限制域名、不限制应用的项目数量</li>
+          <li>官网一年下载（更新）权限</li>
+        </ul>
+        <div class="alone-buy">
+          <a href="javascript:;" class="layui-btn layui-btn-disabled">暂停授权，等待开放</a>
+          <!-- <a href="" target="_blank" class="layui-btn">选择</a> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="layui-col-sm6">
+      <div class="alone-version-desc layui-text">
+        <h2>未来版</h2>
+        <p>
+          <span class="alone-badge">ThinkEngine V1.0+</span>
+        </p>
+        <ul>
+          <li>始终基于全新的 layui 版本</li>
+          <li>单页面应用，所有操作无需跳转</li>
+          <li>支持前后端分离开发模式</li>
+          <li>同时也内置对 iframe 方式的支持</li>
+          <li>面向全屏幕尺寸的响应式适配能力</li>
+          <li>灵活的主题色配置</li>
+          <li>专属的开发者文档，助你快速掌握</li>
+          <li>专属的会员群，与同道中人隔空交流</li>
+          <li>layui 社区 VIP 标识</li>
+          <li>不限制域名、不限制应用的项目数量</li>
+          <li  style="color: #FF5722;">官网永久下载（更新）权限</li>
+        </ul>
+        <div class="alone-buy">
+          <a href="javascript:;" class="layui-btn layui-btn-disabled">暂停授权，等待开放</a>
+          <!-- <a href="" target="_blank" class="layui-btn">选择</a> -->
+        </div>
+      </div>
+    </div>
+    
+    <!--<div class="layui-col-sm12">
+      <blockquote class="layui-elem-quote">
+        当前为 layuiAdmin rc 版本，前 500 名享受特惠
+      </blockquote>
+    </div>-->
+    
+  </div>
+</div>
+
+
+<div class="layui-footer footer footer-index">
+  <div class="layui-main">
+    <p>&copy; 2017 - 2018 <a href="http://www.52nd.xin/">52ND.XIN</a> 版权所有</p>
+    <p>
+      官方情怀出品
+    </p>
+  </div>
+</div>  
+
+
+<script src="__LAYUI__layui.js"></script>
+<script>
+layui.config({
+  version: 20171229
+});
+</script>
+<script src="/static/download/js/home.js"></script>
+</body>
+</html>
+
+

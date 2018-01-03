@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户{lt name=":input('id')" value="0"}新增{else/}编辑{/lt} | TE.CMS - ThinkEngineCMS</title>
+
+    <!--STYLESHEET-->
+    <link href="__LAYUI__css/layui.css" rel="stylesheet" >
+    <link href='__ADMIN__css/font-face.css' rel='stylesheet'>
+    <link href="__ADMIN__css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/nifty.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="__ADMIN__css/demo/nifty-demo.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/magic-check/css/magic-check.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/cropper.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/cropper/head/sitelogo.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/summernote/summernote.min.css" rel="stylesheet">
+    <link href="__ADMIN__plugins/pace/pace.min.css" rel="stylesheet">
+
+    <!--JAVASCRIPT-->
+    <script src="__ADMIN__js/jquery-2.2.4.min.js"></script>
+    <script src="__ADMIN__js/jquery.cookie.js"></script>
+    <script src="__ADMIN__js/bootstrap.min.js"></script>
+    <script src="__ADMIN__js/nifty.min.js"></script>
+    <script src="__ADMIN__js/demo/nifty-demo.min.js"></script>
+    <script src="__ADMIN__plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="__ADMIN__js/demo/icons.js"></script>
+    <script src="__ADMIN__plugins/summernote/summernote.min.js"></script>
+    <script src="__ADMIN__plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script src="__ADMIN__plugins/validform/validform.js"></script>
+    <script src="__LAYUI__layui.js"></script>
+    <script src="__ADMIN__js/myself.min.js"></script>
+</head>
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="aside-float aside-bright effect navbar-fixed footer-fixed mainnav-lg mainnav-fixed">
+        <!--NAVBAR-->
+        {include file="static/admin/navbar.html"}
+        <!--END NAVBAR-->
+        <div class="boxed">
+            <!--CONTENT CONTAINER-->
+            <div id="content-container">
+                <!--Page Title-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">用户管理</h1>
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <span class="input-group-btn">
+                                <button class="text-muted" type="button"><i class="demo-pli-magnifi-glass"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--End page title-->
+                <!--Breadcrumb-->
+                <ol class="breadcrumb">
+                    <li><a href="{:url('/admin/index/index')}">首页</a></li>
+                    <li><a href="{:url('/admin/user/index')}">列表</a></li>
+                    <li class="active">{lt name=":input('id')" value="0"}新增{else/}编辑{/lt}</li>
+                </ol>
+                <!--End breadcrumb-->
+                <!--Page content-->
+                <div id="page-content">
+					<div class="row">
+					    <div class="col-lg-12">
+					        <div class="panel">
+					            <div class="panel-heading">
+					                <h3 class="panel-title">用户{lt name=":input('id')" value="0"}新增{else/}编辑{/lt}</h3>
+					            </div>
+					            <!-- BASIC FORM ELEMENTS -->
+					            <form method="post" action="{:url('/admin/user/saveOrUpdate')}" class="Validform">
+                                    <div class="panel-body form-horizontal form-padding">
+                
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">用户名</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写用户名" name="username" value="" datatype="*"  nullmsg="请填写用户名">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">昵称</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写昵称" name="nickname" value="" datatype="*"  nullmsg="请填写昵称">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">真实姓名</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="请填写真实姓名" name="truename" value=""  nullmsg="请填写真实姓名">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">密码</label>
+                                            <div class="col-md-5">
+                                                <input type="password" class="form-control" name="password" value="" placeholder="用户密码" datatype="*" nullmsg="密码不能为空">
+                                            </div>
+                                        </div>
+
+                                        <!--Radio-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">设置</label>
+                                            <div class="col-md-5">
+                                                <div class="radio">
+                                                    <input id="checkbox-0" name="isAdmin" value="1" class="magic-radio" type="radio" checked>
+                                                    <label for="checkbox-0">管理员</label>
+                                                    <input id="checkbox-1" name="isAdmin" value="0" class="magic-radio" type="radio" checked>
+                                                    <label for="checkbox-1">非管理员</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--select-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">状态</label>
+                                            <div class="col-md-5">
+                                                <select class="selectpicker" name="status">
+                                                    <option value="0" selected>待审核</option>
+                                                    <option value="1">启用</option>
+                                                    <option value="2">锁定</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!--Radio-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">性别</label>
+                                            <div class="col-md-5">
+                                                <div class="radio">
+
+                                                    <input id="radio-1" class="magic-radio" type="radio" name="sex" value="1"><label for="radio-1">男</label>
+                                                    <input id="radio-2" class="magic-radio" type="radio" name="sex" value="0"><label for="radio-2">女</label>
+                                                    <input id="radio-3" class="magic-radio" type="radio" name="sex" value="2" checked><label for="radio-3">保密</label>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Radio-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">用户组</label>
+                                            <div class="col-md-5">
+                                                <div class="radio">
+                                                    {volist name="$gradeList" id="item" key="key"}
+                                                    <input id="group-{$key}" name="group" value="{$item.id}" class="magic-radio" type="radio" {in name="item.id" value="$group"}checked{/in}><label for="group-{$key}">{$item.name}</label>
+                                                    {/volist}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">用户头像</label>
+                                            <div class="col-md-5 input-group">
+                                                <input type="text" class="form-control data-cropper" name="photo" value="" onclick="viewPhoto(this, '.data-cropper')">
+                                                <span class="input-group-addon"><a href="JavaScript:void(0)" class="fa fa-upload" onclick="cropper(this)"></a></span>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">手机号</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="telephone" value="">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">微信</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="wechat" value="">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">腾讯QQ</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="qq" value="">
+                                            </div>
+                                        </div>
+
+                                        <!--select-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">地区</label>
+                                            <div class="col-md-5 input-group">
+                                                <input type="text" class="form-control" value="" disabled>
+                                                <span class="input-group-addon"><a href="JavaScript:void(0)" class="fa fa-pencil-square-o" onclick="getProvince(this,false)"></a></span>
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">详细地址</label>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder="" name="address" value="">
+                                            </div>
+                                        </div>
+
+                                        <!--text-->
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">简介</label>
+                                            <div class="col-md-5">
+                                                <textarea name="desc" cols="30" rows="10" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                
+                                    </div>
+					            <!-- END BASIC FORM ELEMENTS -->
+                                <div class="panel-footer text-right">
+                                    <button class="btn btn-success" type="submit">提交</button>
+                                </div>
+                                </form>
+					        </div>
+					    </div>
+					</div>
+
+                </div>
+                <!--End page content-->
+            </div>
+            <!--END CONTENT CONTAINER-->
+            <!--ASIDE-->
+            {include file="static/admin/aside.html"}
+            <!--END ASIDE-->
+            <!--MAIN NAVIGATION-->
+            {include file="static/admin/menu.html"}
+            <!--END MAIN NAVIGATION-->
+        </div>
+        <!-- FOOTER -->
+        {include file="static/admin/footer.html"}
+        <!-- END FOOTER -->
+        <!-- SCROLL PAGE BUTTON -->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+    </div>
+    <!-- END OF CONTAINER -->
+    <script>
+        $(function () {
+            textEditor(); //编辑器
+            Myinit();
+        })
+    </script>
+</body>
+</html>
